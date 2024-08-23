@@ -3,7 +3,13 @@
 
 # General information for running Amber Protocol
 
-This repository is for running a complexed simulation of a protein and its ligand. It uses the HMG-CoA Reductase docked with NAP and HMG as a reference example. The PDF instructions relate to running amber through job submission on a TARA HPC server. A plethora of files are available and utilized largely from a core 'qm_protocols' directory. These scripts encompass running parameterization of the complexed system, NVT and NPT equilibration, and production runs. In addition, there are a variety of scripts for running standard RMSD/RMSF analyses through python and/or R. Finally, there are methods for running a PBSA analysis using the MMPBSA.py program within Amber. 
+This repository is for running a complexed simulation of a protein and its ligand. It uses the HMG-CoA Reductase docked with NAP and HMG as a reference example. There are three PDF files associated with protocols for running simulation and PBSA, accordingly: 
+
+1. Part1_HMG-Simulation-Protocol.pdf --> This is a lengthy review of using the qm_protocol directory for running a complexed MD Simulation
+2. Part2_PBSA-protocol.pdf --> This is the protocol for performing a PBSA examination within Amber following simulation
+3. Part3_Decomposition-Cleaner.pdf --> This is a way to generate a more easily digested decomposition file while running the PBSA calculation. It is paired with an R script for generating a nice box plot of the data.
+
+The PDF instructions relate to running amber through job submission on a TARA HPC server. A plethora of files are available and utilized largely from a core 'qm_protocols' directory. These scripts encompass running parameterization of the complexed system, NVT and NPT equilibration, and production runs. In addition, there are a variety of scripts for running standard RMSD/RMSF analyses through python and/or R. Finally, there are methods for running a PBSA analysis using the MMPBSA.py program within Amber. 
 
 **For an example: **
 
