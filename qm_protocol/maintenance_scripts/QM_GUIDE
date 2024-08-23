@@ -1,0 +1,18 @@
+
+
+
+1) we obtained the combined structures
+
+2) run the pt1_amber_protlig_param.sh
+    this will go through Gaussian and gettting the resp charges
+
+3) run protlig_em.sh
+   this runs a minimization protocol on a non-solvated complex:
+   protlig-nosolv.inpcrd and protlig-nosolv.prmtop
+   these were generated with the tleap-qmbox.in where we have the setbox
+   instead of solvatebox command to generate a PBC box without solvent
+
+4) now, we should just need to run tleap again, but on the final output of the EM run
+    making sure to source the previously generated lig.frcmod and lib files.
+
+5)

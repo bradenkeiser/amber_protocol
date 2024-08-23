@@ -1,0 +1,8 @@
+source leaprc.gaff2 #Source leaprc file for gaff2
+#loadamberprep lig.prepi #Load the prepi file for the ligand
+HMG = loadmol2 lig_resp_hmg.mol2 #Load the mol2 file with RESP charges
+loadamberparams HMG.frcmod #Load the additional frcmod file for ligand
+savepdb HMG lig_hmg_out.pdb #Save the pdb file
+saveoff HMG hmg.lib
+saveamberparm HMG lig_hmg_tpr.prmtop lig_hmg_trj.inpcrd #Save the topology and coordiante files
+quit #Quit tleap

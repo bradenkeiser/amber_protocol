@@ -1,0 +1,54 @@
+#parm tpr-150ns.pdb
+#trajin trj-150ns.dcd
+autoimage :1-202
+rms tofirst :1-202&@CA=
+distance fi1 :52@CZ= :174@CD= out 150_dist_f81i203_cz_PROTEIN_TEMP.dat
+distance fi2 :52@CE1= :174@CD= out 150_dist_f81i203_ce1_PROTEIN_TEMP.dat
+distance fi3 :52@CE2= :174@CD= out 150_dist_f81i203_ce2_PROTEIN_TEMP.dat
+distance nn :17@N :86@N out 150_dist_t46q115_nn_PROTEIN_TEMP.dat
+distance sh :85@OG= :178@NE2= out 150_dist_s114h207_PROTEIN_TEMP.dat
+distance it :17@CG2= :174@CD= out 150_dist_t46i203_PROTEIN_TEMP.dat
+distance iq :54@NE2= :174@CD= out 150_dist_q83i203_PROTEIN_TEMP.dat
+reference tpr-150ns.pdb
+
+nativecontacts name NC1 :52&!@H* :174&!@H* \
+byresidue out 150_cont_f81i203_PROTEIN_TEMP.dat mindist maxdist \
+resout 150_rescont_f81i203_PROTEIN_TEMP.dat \
+distance 5.0 reference map mapout 52resmap.gnu skipnative \
+#contactpdb f52-cont.pdb \
+nncontactpdb f52-nncont.pdb \
+#series seriesnnout 52nnative.dat
+#series resseriesout 52resseries.dat
+
+
+
+nativecontacts name NC2 :170-175&!@H* :160-166&!@H* \
+byresidue out 150_cont_loop_PROTEIN_TEMP.dat mindist maxdist \
+resout 150_rescont_loop_PROTEIN_TEMP.dat \
+distance 5.0 reference map mapout loopresmap.gnu skipnative \
+#contactpdb loop-cont.pdb \
+nncontactpdb loop-nncont.pdb \
+#series seriesnnout loopnnative.dat
+#series resseriesout loopresseries.dat
+
+nativecontacts name NC3 :85,163&!@H* :178&!@H* \
+byresidue out 150_cont_cat_PROTEIN_TEMP.dat mindist maxdist \
+resout 150_rescont_cat_PROTEIN_TEMP.dat \
+distance 3.5 reference map mapout catresmap.gnu skipnative \
+contactpdb cat-cont.pdb \
+nncontactpdb cat-nncont.pdb \
+#series seriesnnout catnnative.dat
+#series resseriesout catresseries.dat
+
+nativecontacts name NC4 :86&!@H* :17&!@H* \
+byresidue out 150_cont_oxy_PROTEIN_TEMP.dat mindist maxdist \
+resout 150_rescont_oxy_PROTEIN_TEMP.dat \
+distance 5.0 reference map mapout oxyresmap.gnu skipnative \
+contactpdb oxy-cont.pdb \
+nncontactpdb oxy-nncont.pdb \
+#series seriesnnout oxynnative.dat
+#series resseriesout oxyresseries.dat
+
+hbond all :1-202 avgout 150_hbond_all_PROTEIN_TEMP.dat
+
+run

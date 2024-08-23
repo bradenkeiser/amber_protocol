@@ -1,0 +1,7 @@
+parm tpr-protein.pdb 
+trajin trj-protein.dcd
+rms protein !(:WAT=)&!(:Na+=)&!(:NAP=)&!(:HMG=)
+rms ligand :NAP nofit out nap_rmsd.xvg
+rms ligand :HMG nofit out hmg_rmsd.xvg
+trajout trj-small.xtc offset 10
+run

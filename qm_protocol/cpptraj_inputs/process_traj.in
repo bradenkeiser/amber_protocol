@@ -1,0 +1,7 @@
+autoimage :1-786 # center the protein so it doesn't cross PBC boundaries
+strip :WAT,Na+,Cl- #get rid of water and ions
+change chainid of :1-359* to 'A'
+change chainid of :360-786* to 'B'
+trajout tpr-protein.pdb onlyframes 1
+trajout trj-protein.dcd
+run

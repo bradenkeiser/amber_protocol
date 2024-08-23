@@ -1,0 +1,11 @@
+npt
+&cntrl
+  imin=0, nstlim=30000,
+  dt=0.002, ntc=2, ntf=2, nrespa=1,
+  ntpr=500, ntwx=500,
+  ntt=3, gamma_ln=5, tempi=TEMP, temp0=TEMP, tautp=2.0,
+  ntb=2, ig=-1,
+  irest=0, ntx=1,
+  nmropt=0,
+  ntp=1, pres0=1.0, taup=2.0,
+&end

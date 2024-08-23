@@ -1,0 +1,8 @@
+# for MMPBSA the prmtop of the protein only is needed
+source /tarafs/utils/modules/build/Amber/22/amber22/dat/leap/cmd/oldff/leaprc.ff14SB
+source leaprc.gaff
+source leaprc.water.opc
+source leaprc.protein.ff14SB
+mol=loadpdb protein_fin.pdb
+saveamberparm mol prot-only.prmtop prot-only.inpcrd
+quit

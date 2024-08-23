@@ -1,0 +1,459 @@
+bash pt1_amber_protlig_param.sh dimer_lig_hip741_protonated y $(pwd)
+this is the mutant parent folder: dimer_lig_hip741_protonated
+this scripts makes amber inputs for ligand, protein with metal (Fe2+),
+and an additional total complex with water and ions
+it uses openbabel to properly add all hydrogens to ligand before
+creating correct ligand topology files; it also renames the output.
+the process will restart with deleting the alpha input folder
+soci
+localuser:deck being added to access control list
+amber acquired
+chmod: changing permissions of '/home/deck/software/rstudio_ub/usr/lib/rstudio/rstudio': Operation not permitted
+Rosetta found
+orca
+/home/deck/bashrc: line 83: /home/deck/software/g16w/bsd/g16.profile: No such file or directory
+gaussed
+Avogadro2 as gadro
+gromacked
+acpype
+protontricks
+input directory present
+rm: cannot remove 'input': No such file or directory
+work on the ligand
+reduce: version 3.3 06/02/2016, Copyright 1997-2016, J. Michael Word
+Processing file: "lig_nap.pdb"
+Database of HETATM connections: "/home/deck/software/amber22//dat/reduce_wwPDB_het_dict.txt"
+WARNING: atom H61A from NAP will be treated as hydrogen
+WARNING: atom H62A from NAP will be treated as hydrogen
+WARNING: atom H71N from NAP will be treated as hydrogen
+WARNING: atom H72N from NAP will be treated as hydrogen
+VDW dot density = 16/A^2
+Orientation penalty scale = 1 (100%)
+Eliminate contacts within 3 bonds.
+Ignore atoms with |occupancy| <= 0.01 during adjustments.
+Waters ignored if B-Factor >= 40 or |occupancy| < 0.66
+Aromatic rings in amino acids accept hydrogen bonds.
+Building or keeping OH & SH Hydrogens.
+Rotating NH3 Hydrogens.
+Not processing Met methyls.
+WARNING: atom H61A from NAP will be treated as hydrogen
+WARNING: atom H61A from NAP will be treated as hydrogen
+WARNING: atom H62A from NAP will be treated as hydrogen
+WARNING: atom H62A from NAP will be treated as hydrogen
+WARNING: atom H61A from NAP will be treated as hydrogen
+WARNING: atom H62A from NAP will be treated as hydrogen
+WARNING: atom H71N from NAP will be treated as hydrogen
+WARNING: atom H71N from NAP will be treated as hydrogen
+WARNING: atom H72N from NAP will be treated as hydrogen
+WARNING: atom H72N from NAP will be treated as hydrogen
+WARNING: atom H71N from NAP will be treated as hydrogen
+WARNING: atom H72N from NAP will be treated as hydrogen
+WARNING: atom H72N from NAP will be treated as hydrogen
+WARNING: atom H71N from NAP will be treated as hydrogen
+WARNING: atom H62A from NAP will be treated as hydrogen
+WARNING: atom H61A from NAP will be treated as hydrogen
+Found 25 hydrogens (25 hets)
+Standardized 25 hydrogens (25 hets)
+Added 0 hydrogens (0 hets)
+Removed 0 hydrogens (0 hets)
+If you publish work which uses reduce, please cite:
+Word, et. al. (1999) J. Mol. Biol. 285, 1735-1747.
+For more information see http://kinemage.biochem.duke.edu
+==============================
+*** Open Babel Warning  in PerceiveBondOrders
+  Failed to kekulize aromatic bonds in OBMol::PerceiveBondOrders (title is lig_nap_pre.pdb)
+
+1 molecule converted
+
+==================================================
+Summary of pdb4amber for: lig_notamber_nap.pdb
+===================================================
+
+----------Chains
+The following (original) chains have been found:
+A
+
+---------- Alternate Locations (Original Residues!))
+
+The following residues had alternate locations:
+None
+-----------Non-standard-resnames
+NAP
+
+---------- Missing heavy atom(s)
+
+None
+
+Welcome to antechamber 22.0: molecular input file processor.
+
+Info: acdoctor mode is on: check and diagnose problems in the input file.
+Info: The atom type is set to gaff2; the options available to the -at flag are
+      gaff, gaff2, amber, bcc, and sybyl.
+
+-- Check Format for pdb File --
+   Status: pass
+Info: Determining atomic numbers from atomic symbols which are case sensitive.
+-- Check Unusual Elements --
+   Status: pass
+-- Check Open Valences --
+   Status: pass
+-- Check Geometry --
+      for those bonded
+      for those not bonded
+   Status: pass
+-- Check Weird Bonds --
+   Status: pass
+-- Check Number of Units --
+   Status: pass
+acdoctor mode has completed checking the input file.
+
+Running: /home/deck/software/amber22/bin/bondtype -j full -i ANTECHAMBER_BOND_TYPE.AC0 -o ANTECHAMBER_BOND_TYPE.AC -f ac
+Warning: The assigned bond types may be wrong, please :
+(1) double check the structure (the connectivity) and/or
+(2) adjust atom valence penalty parameters in APS.DAT, and/or
+(3) increase PSCUTOFF in define.h and recompile bondtype.c
+    (be cautious, using a large value of PSCUTOFF (>100) will
+    significantly increase the computation time).
+
+Running: /home/deck/software/amber22/bin/atomtype -i ANTECHAMBER_AC.AC0 -o ANTECHAMBER_AC.AC -p gaff2
+Info: Total number of electrons: 385; net charge: 0
+Info: The number of electrons is odd (385).
+      Please check the total charge (-nc flag) and spin multiplicity (-m flag).
+
+Running: /home/deck/software/amber22/bin/sqm -O -i sqm.in -o sqm.out
+/home/deck/software/amber22/bin/wrapped_progs/antechamber: Fatal Error!
+Cannot properly run "/home/deck/software/amber22/bin/sqm -O -i sqm.in -o sqm.out".
+mol2 generated, starting RESP procedure
+cp: cannot stat 'lig_nap.mol2': No such file or directory
+running antechamber and generating g09 input
+
+Welcome to antechamber 22.0: molecular input file processor.
+
+Info: acdoctor mode is on: check and diagnose problems in the input file.
+Info: The atom type is set to gaff2; the options available to the -at flag are
+      gaff, gaff2, amber, bcc, and sybyl.
+
+/home/deck/software/amber22/bin/wrapped_progs/antechamber: Fatal Error!
+Cannot open the input file (lig.mol2).
+No such file or directory
+sed: can't read gcrt.com: No such file or directory
+sed: can't read gcrt.com: No such file or directory
+sed: can't read gcrt.com: No such file or directory
+sed: can't read gcrt.com: No such file or directory
+sed: can't read gcrt.com: No such file or directory
+cat: gcrt.com: No such file or directory
+gaussian input generate, running the program...
+g09_respguide.sh: line 15: mpirun: command not found
+grep: lig_g09inp.log: No such file or directory
+the gaussian run did not complete succesfully
+cp: cannot stat 'lig_resp_nap.mol2': No such file or directory
+generate the topology pdb from the mol2 using cpptraj
+
+CPPTRAJ: Trajectory Analysis. V6.4.4 (AmberTools)
+    ___  ___  ___  ___
+     | \/ | \/ | \/ |
+    _|_/\_|_/\_|_/\_|_
+
+| Date/time: 01/31/24 17:33:37
+| Available memory: 338.248 MB
+
+Error: 'lig_resp_nap.mol2': No such file or directory
+Error: Could not open topology 'lig_resp_nap.mol2'
+TIME: Total execution time: 0.0004 seconds.
+Error: Error(s) occurred during execution.
+
+awk: fatal: cannot open file `mol2pdb_nap_pre.pdb' for reading: No such file or directory
+reduce: version 3.3 06/02/2016, Copyright 1997-2016, J. Michael Word
+Processing file: "lig_hmg.pdb"
+Database of HETATM connections: "/home/deck/software/amber22//dat/reduce_wwPDB_het_dict.txt"
+WARNING: atom H101 from HMG will be treated as hydrogen
+WARNING: atom H121 from HMG will be treated as hydrogen
+WARNING: atom H122 from HMG will be treated as hydrogen
+WARNING: atom H131 from HMG will be treated as hydrogen
+WARNING: atom H132 from HMG will be treated as hydrogen
+WARNING: atom H133 from HMG will be treated as hydrogen
+WARNING: atom H141 from HMG will be treated as hydrogen
+WARNING: atom H142 from HMG will be treated as hydrogen
+WARNING: atom H143 from HMG will be treated as hydrogen
+WARNING: atom H2A1 from HMG will be treated as hydrogen
+WARNING: atom H2P1 from HMG will be treated as hydrogen
+WARNING: atom H2P2 from HMG will be treated as hydrogen
+WARNING: atom H3P1 from HMG will be treated as hydrogen
+WARNING: atom H3P2 from HMG will be treated as hydrogen
+WARNING: atom H61A from HMG will be treated as hydrogen
+WARNING: atom H62A from HMG will be treated as hydrogen
+WARNING: atom H6P1 from HMG will be treated as hydrogen
+WARNING: atom H6P2 from HMG will be treated as hydrogen
+WARNING: atom H8A1 from HMG will be treated as hydrogen
+WARNING: atom H7P1 from HMG will be treated as hydrogen
+WARNING: atom H7P2 from HMG will be treated as hydrogen
+VDW dot density = 16/A^2
+Orientation penalty scale = 1 (100%)
+Eliminate contacts within 3 bonds.
+Ignore atoms with |occupancy| <= 0.01 during adjustments.
+Waters ignored if B-Factor >= 40 or |occupancy| < 0.66
+Aromatic rings in amino acids accept hydrogen bonds.
+Building or keeping OH & SH Hydrogens.
+Rotating NH3 Hydrogens.
+Not processing Met methyls.
+WARNING: atom H101 from HMG will be treated as hydrogen
+WARNING: atom H101 from HMG will be treated as hydrogen
+WARNING: atom H121 from HMG will be treated as hydrogen
+WARNING: atom H121 from HMG will be treated as hydrogen
+WARNING: atom H122 from HMG will be treated as hydrogen
+WARNING: atom H122 from HMG will be treated as hydrogen
+WARNING: atom H121 from HMG will be treated as hydrogen
+WARNING: atom H122 from HMG will be treated as hydrogen
+WARNING: atom H131 from HMG will be treated as hydrogen
+WARNING: atom H131 from HMG will be treated as hydrogen
+WARNING: atom H132 from HMG will be treated as hydrogen
+WARNING: atom H133 from HMG will be treated as hydrogen
+WARNING: atom H132 from HMG will be treated as hydrogen
+WARNING: atom H131 from HMG will be treated as hydrogen
+WARNING: atom H132 from HMG will be treated as hydrogen
+WARNING: atom H133 from HMG will be treated as hydrogen
+WARNING: atom H133 from HMG will be treated as hydrogen
+WARNING: atom H131 from HMG will be treated as hydrogen
+WARNING: atom H132 from HMG will be treated as hydrogen
+WARNING: atom H133 from HMG will be treated as hydrogen
+WARNING: atom H141 from HMG will be treated as hydrogen
+WARNING: atom H141 from HMG will be treated as hydrogen
+WARNING: atom H142 from HMG will be treated as hydrogen
+WARNING: atom H143 from HMG will be treated as hydrogen
+WARNING: atom H142 from HMG will be treated as hydrogen
+WARNING: atom H141 from HMG will be treated as hydrogen
+WARNING: atom H142 from HMG will be treated as hydrogen
+WARNING: atom H143 from HMG will be treated as hydrogen
+WARNING: atom H143 from HMG will be treated as hydrogen
+WARNING: atom H141 from HMG will be treated as hydrogen
+WARNING: atom H142 from HMG will be treated as hydrogen
+WARNING: atom H143 from HMG will be treated as hydrogen
+WARNING: atom H2A1 from HMG will be treated as hydrogen
+WARNING: atom H2A1 from HMG will be treated as hydrogen
+WARNING: atom H2P1 from HMG will be treated as hydrogen
+WARNING: atom H2P1 from HMG will be treated as hydrogen
+WARNING: atom H2P2 from HMG will be treated as hydrogen
+WARNING: atom H2P2 from HMG will be treated as hydrogen
+WARNING: atom H2P1 from HMG will be treated as hydrogen
+WARNING: atom H2P2 from HMG will be treated as hydrogen
+WARNING: atom H3P1 from HMG will be treated as hydrogen
+WARNING: atom H3P1 from HMG will be treated as hydrogen
+WARNING: atom H3P2 from HMG will be treated as hydrogen
+WARNING: atom H3P2 from HMG will be treated as hydrogen
+WARNING: atom H3P1 from HMG will be treated as hydrogen
+WARNING: atom H3P2 from HMG will be treated as hydrogen
+WARNING: atom H61A from HMG will be treated as hydrogen
+WARNING: atom H61A from HMG will be treated as hydrogen
+WARNING: atom H62A from HMG will be treated as hydrogen
+WARNING: atom H62A from HMG will be treated as hydrogen
+WARNING: atom H61A from HMG will be treated as hydrogen
+WARNING: atom H62A from HMG will be treated as hydrogen
+WARNING: atom H6P1 from HMG will be treated as hydrogen
+WARNING: atom H6P1 from HMG will be treated as hydrogen
+WARNING: atom H6P2 from HMG will be treated as hydrogen
+WARNING: atom H6P2 from HMG will be treated as hydrogen
+WARNING: atom H6P1 from HMG will be treated as hydrogen
+WARNING: atom H6P2 from HMG will be treated as hydrogen
+WARNING: atom H7P1 from HMG will be treated as hydrogen
+WARNING: atom H7P1 from HMG will be treated as hydrogen
+WARNING: atom H7P2 from HMG will be treated as hydrogen
+WARNING: atom H7P2 from HMG will be treated as hydrogen
+WARNING: atom H7P1 from HMG will be treated as hydrogen
+WARNING: atom H7P2 from HMG will be treated as hydrogen
+WARNING: atom H8A1 from HMG will be treated as hydrogen
+WARNING: atom H8A1 from HMG will be treated as hydrogen
+WARNING: atom H8A1 from HMG will be treated as hydrogen
+WARNING: atom H8A1 from HMG will be treated as hydrogen
+WARNING: atom H7P2 from HMG will be treated as hydrogen
+WARNING: atom H7P2 from HMG will be treated as hydrogen
+WARNING: atom H7P1 from HMG will be treated as hydrogen
+WARNING: atom H7P1 from HMG will be treated as hydrogen
+WARNING: atom H7P2 from HMG will be treated as hydrogen
+WARNING: atom H7P1 from HMG will be treated as hydrogen
+WARNING: atom H6P2 from HMG will be treated as hydrogen
+WARNING: atom H6P2 from HMG will be treated as hydrogen
+WARNING: atom H6P1 from HMG will be treated as hydrogen
+WARNING: atom H6P1 from HMG will be treated as hydrogen
+WARNING: atom H6P2 from HMG will be treated as hydrogen
+WARNING: atom H6P1 from HMG will be treated as hydrogen
+WARNING: atom H62A from HMG will be treated as hydrogen
+WARNING: atom H61A from HMG will be treated as hydrogen
+WARNING: atom H3P2 from HMG will be treated as hydrogen
+WARNING: atom H3P2 from HMG will be treated as hydrogen
+WARNING: atom H3P1 from HMG will be treated as hydrogen
+WARNING: atom H3P1 from HMG will be treated as hydrogen
+WARNING: atom H3P2 from HMG will be treated as hydrogen
+WARNING: atom H3P1 from HMG will be treated as hydrogen
+WARNING: atom H2P2 from HMG will be treated as hydrogen
+WARNING: atom H2P2 from HMG will be treated as hydrogen
+WARNING: atom H2P1 from HMG will be treated as hydrogen
+WARNING: atom H2P1 from HMG will be treated as hydrogen
+WARNING: atom H2P2 from HMG will be treated as hydrogen
+WARNING: atom H2P1 from HMG will be treated as hydrogen
+WARNING: atom H2A1 from HMG will be treated as hydrogen
+WARNING: atom H2A1 from HMG will be treated as hydrogen
+WARNING: atom H143 from HMG will be treated as hydrogen
+WARNING: atom H143 from HMG will be treated as hydrogen
+WARNING: atom H142 from HMG will be treated as hydrogen
+WARNING: atom H141 from HMG will be treated as hydrogen
+WARNING: atom H142 from HMG will be treated as hydrogen
+WARNING: atom H143 from HMG will be treated as hydrogen
+WARNING: atom H142 from HMG will be treated as hydrogen
+WARNING: atom H141 from HMG will be treated as hydrogen
+WARNING: atom H141 from HMG will be treated as hydrogen
+WARNING: atom H143 from HMG will be treated as hydrogen
+WARNING: atom H142 from HMG will be treated as hydrogen
+WARNING: atom H141 from HMG will be treated as hydrogen
+WARNING: atom H133 from HMG will be treated as hydrogen
+WARNING: atom H133 from HMG will be treated as hydrogen
+WARNING: atom H132 from HMG will be treated as hydrogen
+WARNING: atom H131 from HMG will be treated as hydrogen
+WARNING: atom H132 from HMG will be treated as hydrogen
+WARNING: atom H133 from HMG will be treated as hydrogen
+WARNING: atom H132 from HMG will be treated as hydrogen
+WARNING: atom H131 from HMG will be treated as hydrogen
+WARNING: atom H131 from HMG will be treated as hydrogen
+WARNING: atom H133 from HMG will be treated as hydrogen
+WARNING: atom H132 from HMG will be treated as hydrogen
+WARNING: atom H131 from HMG will be treated as hydrogen
+WARNING: atom H122 from HMG will be treated as hydrogen
+WARNING: atom H122 from HMG will be treated as hydrogen
+WARNING: atom H121 from HMG will be treated as hydrogen
+WARNING: atom H121 from HMG will be treated as hydrogen
+WARNING: atom H122 from HMG will be treated as hydrogen
+WARNING: atom H121 from HMG will be treated as hydrogen
+WARNING: atom H101 from HMG will be treated as hydrogen
+WARNING: atom H101 from HMG will be treated as hydrogen
+Found 39 hydrogens (39 hets)
+Standardized 39 hydrogens (39 hets)
+Added 0 hydrogens (0 hets)
+Removed 0 hydrogens (0 hets)
+If you publish work which uses reduce, please cite:
+Word, et. al. (1999) J. Mol. Biol. 285, 1735-1747.
+For more information see http://kinemage.biochem.duke.edu
+1 molecule converted
+
+==================================================
+Summary of pdb4amber for: lig_notamber_hmg.pdb
+===================================================
+
+----------Chains
+The following (original) chains have been found:
+B
+
+---------- Alternate Locations (Original Residues!))
+
+The following residues had alternate locations:
+None
+-----------Non-standard-resnames
+HMG
+
+---------- Missing heavy atom(s)
+
+None
+
+Welcome to antechamber 22.0: molecular input file processor.
+
+Info: acdoctor mode is on: check and diagnose problems in the input file.
+Info: The atom type is set to gaff2; the options available to the -at flag are
+      gaff, gaff2, amber, bcc, and sybyl.
+
+-- Check Format for pdb File --
+   Status: pass
+Info: Determining atomic numbers from atomic symbols which are case sensitive.
+-- Check Unusual Elements --
+   Status: pass
+-- Check Open Valences --
+   Status: pass
+-- Check Geometry --
+      for those bonded
+Warning: Large distance for BOND        96      N6A     H11     0            1.22  [0.70 - 1.20]
+      for those not bonded
+-- Check Weird Bonds --
+   Status: pass
+-- Check Number of Units --
+   Status: pass
+acdoctor mode has completed checking the input file.
+
+Running: /home/deck/software/amber22/bin/bondtype -j full -i ANTECHAMBER_BOND_TYPE.AC0 -o ANTECHAMBER_BOND_TYPE.AC -f ac
+Warning: The assigned bond types may be wrong, please :
+(1) double check the structure (the connectivity) and/or
+(2) adjust atom valence penalty parameters in APS.DAT, and/or
+(3) increase PSCUTOFF in define.h and recompile bondtype.c
+    (be cautious, using a large value of PSCUTOFF (>100) will
+    significantly increase the computation time).
+
+Running: /home/deck/software/amber22/bin/atomtype -i ANTECHAMBER_AC.AC0 -o ANTECHAMBER_AC.AC -p gaff2
+Info: Total number of electrons: 474; net charge: 0
+
+Running: /home/deck/software/amber22/bin/sqm -O -i sqm.in -o sqm.out
+
+Running: /home/deck/software/amber22/bin/am1bcc -i ANTECHAMBER_AM1BCC_PRE.AC -o ANTECHAMBER_AM1BCC.AC -f ac -p /home/deck/software/amber22/dat/antechamber/BCCPARM.DAT -s 2 -j 1
+
+Running: /home/deck/software/amber22/bin/atomtype -f ac -p bcc -o ANTECHAMBER_AM1BCC.AC -i ANTECHAMBER_AM1BCC_PRE.AC
+
+mol2 generated, starting RESP procedure
+running antechamber and generating g09 input
+
+Welcome to antechamber 22.0: molecular input file processor.
+
+Info: acdoctor mode is on: check and diagnose problems in the input file.
+Info: The atom type is set to gaff2; the options available to the -at flag are
+      gaff, gaff2, amber, bcc, and sybyl.
+
+/home/deck/software/amber22/bin/wrapped_progs/antechamber: Fatal Error!
+Cannot open the input file (lig.mol2).
+No such file or directory
+sed: can't read gcrt.com: No such file or directory
+sed: can't read gcrt.com: No such file or directory
+sed: can't read gcrt.com: No such file or directory
+sed: can't read gcrt.com: No such file or directory
+sed: can't read gcrt.com: No such file or directory
+cat: gcrt.com: No such file or directory
+gaussian input generate, running the program...
+g09_respguide.sh: line 15: mpirun: command not found
+grep: lig_g09inp.log: No such file or directory
+the gaussian run did not complete succesfully
+cp: cannot stat 'lig_resp_hmg.mol2': No such file or directory
+Cannot open file (lig_resp_hmg.mol2) with mode (r).
+No such file or directory
+generate the topology pdb from the mol2 using cpptraj
+
+CPPTRAJ: Trajectory Analysis. V6.4.4 (AmberTools)
+    ___  ___  ___  ___
+     | \/ | \/ | \/ |
+    _|_/\_|_/\_|_/\_|_
+
+| Date/time: 01/31/24 18:30:00
+| Available memory: 355.185 MB
+
+Error: 'lig_resp_hmg.mol2': No such file or directory
+Error: Could not open topology 'lig_resp_hmg.mol2'
+TIME: Total execution time: 0.0003 seconds.
+Error: Error(s) occurred during execution.
+
+awk: fatal: cannot open file `mol2pdb_hmg_pre.pdb' for reading: No such file or directory
+make sure lig.mol2 = <ligand name in PDB>.mol2 OR FRCMOD
+work with the pdb file
+convert cleaned protein file to amber
+
+==================================================
+Summary of pdb4amber for: dimer_lig_hip741_protonated_clean.pdb
+===================================================
+
+----------Chains
+The following (original) chains have been found:
+A
+B
+
+---------- Alternate Locations (Original Residues!))
+
+The following residues had alternate locations:
+None
+-----------Non-standard-resnames
+
+
+---------- Missing heavy atom(s)
+
+None
+no de-hipped protein file found, aborting...

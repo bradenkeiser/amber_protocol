@@ -1,0 +1,9 @@
+Stage 2 - water and ions minimisation
+ &cntrl
+  imin=1, maxcyc=5000, ncyc=500,
+  ntb=1, cut=10,
+  ntpr=50, ntwx=200,
+  ntr=1,
+  restraint_wt=500.0,
+  restraintmask='!(:WAT=)&!(:HMG=)&!(:NAP=)&!(:Na+=)'
+  &end

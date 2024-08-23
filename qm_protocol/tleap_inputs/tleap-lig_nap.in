@@ -1,0 +1,8 @@
+source leaprc.gaff2 #Source leaprc file for gaff2
+#loadamberprep lig.prepi #Load the prepi file for the ligand
+NAP = loadmol2 lig_resp_nap.mol2 #Load the mol2 file with RESP charges
+loadamberparams nadph.frcmod #Load the additional frcmod file for ligand
+savepdb NAP lig_nap_out.pdb #Save the pdb file
+saveoff NAP nap.lib
+saveamberparm NAP lig_nap_tpr.prmtop lig_nap_trj.inpcrd #Save the topology and coordiante files
+quit #Quit tleap

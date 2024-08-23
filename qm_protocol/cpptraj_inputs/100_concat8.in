@@ -1,0 +1,8 @@
+parm ../../../min_final/protlig-solv.prmtop
+trajin prod.nc
+trajin prod5.nc
+trajin prod6.nc
+trajin prod7.nc 
+trajin prod8.nc
+trajout prod.nc 
+run

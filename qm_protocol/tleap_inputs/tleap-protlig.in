@@ -1,0 +1,26 @@
+# to adapt 
+source /tarafs/utils/modules/build/Amber/22/amber22/dat/leap/cmd/oldff/leaprc.ff14SB
+source leaprc.gaff2
+source leaprc.water.opc
+source leaprc.protein.ff14SB
+loadamberparams frcmod.ionslm_126_opc
+# Amber needs either a prepin or a mol2 to generate a lib file from a mol2 and a frcmod
+loadamberparams ../../nadph.frcmod
+loadoff ../../nap.lib
+loadamberparams ../../hmg.frcmod
+loadoff ../../HMG.lib
+mol=loadpdb protlig_min_fin.pdb
+check mol
+# dont forget SS bonds @
+#savepdb mol protlig-nosolv.pdb
+#saveamberparm mol protlig-nosolv.prmtop protlig-nosolv.inpcrd
+
+solvatebox mol TIP3PBOX 14.0
+addions mol IONS QTY #Neutralize the system using Cl- ions
+check mol
+savepdb mol protlig-solv.pdb
+saveamberparm mol protlig-solv.prmtop protlig-solv.inpcrd
+
+quit
+
+

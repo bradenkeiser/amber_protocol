@@ -1,0 +1,6 @@
+autoimage :1-203 # center the protein so it doesn't cross PBC boundaries
+strip :WAT,Na+,Cl- #get rid of wa
+trajout tpr-protein.pdb onlyframes 1
+trajout tpr-100ns.pdb onlyframes 10000
+trajout trj-protein.dcd 
+run
