@@ -1,5 +1,5 @@
 # Amber Protocol for Complexed Protein Simulation and PBSA Evaluation 
-<img src="https://github.com/user-attachments/assets/41cbbb8f-83e7-4fe9-b25a-1a5d1019caa7" width=900 height=500>
+<img src="https://github.com/user-attachments/assets/41cbbb8f-83e7-4fe9-b25a-1a5d1019caa7" width=700 height=400>
 
 # General information for running Amber Protocol
 
